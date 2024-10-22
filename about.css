@@ -1,13 +1,19 @@
+/* General reset for margin and font */
 * {
     margin: 0;
+    padding: 0;
     font-family: "Poppins", sans-serif;
   }
+  
+  /* Full screen background */
   #back {
     height: 100vh;
     width: 100vw;
     background-color: black;
-    z-index: -2;
+    z-index: -2;  /* Ensure it's behind other elements */
   }
+  
+  /* Image styling */
   #back-photo {
     height: 350px;
     width: 250px;
@@ -16,6 +22,8 @@
     left: 20%;
     bottom: 20%;
   }
+  
+  /* Main image styling */
   #image {
     border: 8px solid #ffd60a;
     height: 350px;
@@ -24,11 +32,13 @@
     position: fixed;
     bottom: 28%;
     left: 25%;
-    background-image: url("images/my2.jpg");
+    background-image: url("../static/images/my2.jpg");  /* Update path for Flask static */
     background-position: center;
     background-size: cover;
     box-shadow: 8px 8px 20px black;
   }
+  
+  /* About Section Styling */
   #about {
     position: absolute;
     right: 15%;
@@ -36,18 +46,24 @@
     height: 350px;
     width: 500px;
     color: white;
-    /* border:1px solid white;   */
   }
+  
+  /* Text Section */
   #text {
     display: flex;
     flex-direction: column;
   }
+  
+  /* Main and not-main text padding */
   #main-text {
     padding: 35px 0px 0px 0px;
   }
+  
   #not-main-text {
     padding: 35px 0px 0px 0px;
   }
+  
+  /* About Me section styling */
   #about-me {
     height: auto;
     width: 150px;
@@ -55,11 +71,15 @@
     font-weight: 900;
     border-bottom: 4px solid #ffd60a;
   }
+  
+  /* Buttons Section Styling */
   #b {
     padding: 35px 0px 0px 0px;
     display: flex;
-    gap: 1rem;
+    gap: 1rem;  /* Proper gap between buttons */
   }
+  
+  /* Hire button styling */
   #hire {
     background-color: #ffd60a;
     height: 40px;
@@ -68,7 +88,15 @@
     border-radius: 4px;
     font-size: medium;
     cursor: pointer;
+    transition: background-color 0.3s ease;
   }
+  
+  /* Hover effect for Hire button */
+  #hire:hover {
+    background-color: #ffcc00;
+  }
+  
+  /* View button styling */
   #view {
     height: 40px;
     width: 170px;
@@ -77,4 +105,11 @@
     background-color: black;
     color: #ffd60a;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Hover effect for View button */
+  #view:hover {
+    background-color: #ffd60a;
+    color: black;
   }

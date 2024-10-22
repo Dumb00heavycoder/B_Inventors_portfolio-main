@@ -1,124 +1,145 @@
-*{
-    margin:0;
+* {
+    margin: 0;
+    padding: 0;
     font-family: "Poppins", sans-serif;
+    box-sizing: border-box; /* Ensures padding and borders are included in element dimensions */
 }
-#back{
-    height:100vh;
-    width:100vw;
+
+#back {
+    height: 100vh;
+    width: 100vw;
     background-color: #2b2d42;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Centers content inside */
 }
-#b-main{
+
+#b-main {
     height: 68vh;
     width: 54vw;
     background-color: #ffd60a;
-    box-shadow: 0 0 15px rgba(0,0,0,0.7);
-    position: absolute;
-    top:15%;
-    left:27%;
-    display:flex;
-}
-#left{
-    height:100%;
-    width:45%;
-}
-#right{
-    height:100%;
-    width:55%;  
-}
-#get{
-    height:10%;
-    width:auto;
-    font-size: xx-large;
-}
-#feel{
-    height:5%;
-    width:auto;
-    font-size: medium;
-}
-#type{
-    height:69%;
-    width: 85%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    position: relative; /* Changed to relative */
     display: flex;
-    flex-direction:column;
+    flex-direction: row;
+    border-radius: 10px; /* Optional: adds a smooth rounded edge to the main container */
 }
-#name{
-    height:40px;
-    width: auto;
-    padding-inline: 25px;
-    background-color: #ffd60a;
-    border:0.2px solid black;
-}
-#email{
-    height:40px;
-    width: auto;
-    padding-inline: 25px;
-    background-color: #ffd60a;
-    border:0.2px solid black;
-}
-#message{
-    height:120px;
-    width: auto;    
-    background-color: #ffd60a;
-    border:0.2px solid black;
-    padding: 10px 0 0 10px;
-}
-#send{
-    background-color: #7209b7;
-    border:none;
-    color:white;
-    height:50px;
-    width:130px;
-    border-radius: 30px;
-    font-size: larger;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-}
-#send:hover{
-    scale:1.1;
-}
-input{
-    outline:none;
-}
-textarea{
-    outline: none;
-}
-#f-main{
-    height:58vh;
-    width:25vw;
-    position:absolute;
-    top:20%;
-    left:22%;
-    background-color:black;
-    box-shadow: 0 0 15px rgba(0,0,0,0.7);
-    position: absolute;
+
+#left {
+    height: 100%;
+    width: 45%;
+    padding: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
-#contact{
+
+#right {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#get {
+    height: 10%;
+    font-size: xx-large;
+    color: #2b2d42; /* Make it visually stand out */
+    padding-left: 20px; /* Add some padding to avoid edge clipping */
+}
+
+#feel {
+    height: 5%;
+    font-size: medium;
+    color: #2b2d42;
+    padding-left: 20px; /* Add padding for alignment */
+}
+
+#type {
+    height: 69%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+#name, #email, #message {
+    width: 100%; /* Ensure full width */
+    padding: 10px;
+    background-color: #ffd60a;
+    border: 0.2px solid black;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+#message {
+    height: 120px;
+    padding: 10px;
+}
+
+#send {
+    background-color: #7209b7;
+    border: none;
+    color: white;
+    height: 50px;
+    width: 130px;
+    border-radius: 30px;
+    font-size: larger;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+#send:hover {
+    transform: scale(1.1); /* Fixed scale issue */
+}
+
+input, textarea {
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 10px;
+}
+
+input:focus, textarea:focus {
+    border: 2px solid #7209b7; /* Adds a focus border to improve accessibility */
+    outline: none;
+}
+
+#f-main {
+    height: 58vh;
+    width: 25vw;
+    background-color: black;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 20%;
+    left: 22%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+#contact {
     height: 20%;
-    width:auto;
-    color:white;
+    color: white;
     font-size: xx-large;
-    padding:25px 0 0 25px;
+    padding: 25px;
 }
-#details{
-    height:75%;
-    width:auto;
-    padding:2px 0 0 30px;
+
+#details {
+    height: 75%;
+    padding: 2px 30px;
+    color: white;
 }
-.fa-location-dot{
-    color:white;
+
+.fa-location-dot, .fa-envelope, .fa-phone, .fa-instagram {
+    color: white;
     font-size: x-large;
+    margin-bottom: 10px; /* Adds spacing between icons */
 }
-.fa-envelope{
-    color:white;
-    font-size: x-large;
-}
-.fa-phone{
-    color:white;
-    font-size: x-large;
-}
-.fa-instagram{
-    color:white;
+
+.fa-instagram {
     font-size: xx-large;
+    margin-top: 10px; /* Adds spacing on the bottom for better balance */
 }

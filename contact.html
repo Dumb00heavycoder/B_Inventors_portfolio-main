@@ -10,29 +10,51 @@
 <body>
     <div id="back">
         <div id="b-main">
+            <!-- Left section (if needed, could be used for something else) -->
             <div id="left"></div>
-            <div id="right"><br><br>
-                  <div><a id=get>Get in Touch</a></div>
-                   <div><a id=feel>Feel Free to drop us a line below!</a></div><br>
-                  <div id="type">
-                    <input id="name" type="text" placeholder="Your Name"><br>
-                    <input id="email" type="email" placeholder="Your Email"><br>
-                    <textarea id="message" type="text" placeholder="Type your message here..."></textarea><br><br>
-                    <button id="send">SEND</button>
-                   </div>
+
+            <!-- Right Section for Contact Form -->
+            <div id="right">
+                <h1 id="get">Get in Touch</h1>
+                <p id="feel">Feel free to drop us a line below!</p>
+
+                <div id="type">
+                    <input id="name" type="text" placeholder="Your Name">
+                    <input id="email" type="email" placeholder="Your Email">
+                    <textarea id="message" placeholder="Type your message here..."></textarea>
+
+                    <button id="send" aria-label="Send message">SEND</button>
+                </div>
             </div>
         </div>
+
+        <!-- Footer Section with Contact Details -->
         <div id="f-main">
-            <div id="contact">Contact Us</div>
+            <h2 id="contact">Contact Us</h2>
             <div id="details">
-                <i class="fa-solid fa-location-dot"></i>
-                <a style="color:white;font-size:large">&nbsp;SRM IST, Delhi-NCR<br><br><br></a>
-                <i class="fa-regular fa-envelope"></i>
-                <a style="color:white;font-size:large">&nbsp;collegeconnectsrm.com<br><br><br></a>
-                <i class="fa-solid fa-phone"></i>
-                <a style="color:white;font-size:x-large">&nbsp;+91 9192........<br><br></a>
-                <i class="fa-brands fa-instagram"></i>
-                <a style="color:white;font-size:larger">&nbsp;@connect_srm</a>
+                <!-- Location Icon and Text -->
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>SRM IST, Delhi-NCR</span>
+                </div>
+
+                <!-- Email Icon and Text -->
+                <div class="contact-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>collegeconnectsrm.com</span>
+                </div>
+
+                <!-- Phone Icon and Text -->
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+91 9192........</span>
+                </div>
+
+                <!-- Instagram Icon and Handle -->
+                <div class="contact-item">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>@connect_srm</span>
+                </div>
             </div>
         </div>
     </div>
